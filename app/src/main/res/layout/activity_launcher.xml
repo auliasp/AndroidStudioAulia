@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--//Linear layout berfungsi untuk mengatur tata letak dengan atribut android:orientation//
+//Orientasi tata letak nya vertikal//
+//Layout width dan height:match parent artinya menyesuaikan lebar dan tinggi layar smarthphone android//
+//padding atau jarak dari dalam 16dp//
+//layout gravity center/ditengah//
+//tools context:LauncherActivity// -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/bg"
+    tools:context=".LauncherActivity">
+
+    <!-- //imageview berfungsi untuk menampilkan gambar pada halaman//
+	//ukuran lebar gambar match parent artinya menyesuaikan layar smartphone//
+	//tinggi gambar 170dp//
+	//margin top (jarak bagian atas objek) yaitu 30dp//-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/logo"/>
+
+    <!--//TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//ukuran text 25dp//
+	//style text bold(tebal)//
+	//layout gravity center(tengah)//
+	//marginBottom jarak sisi bawah 16dp// -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginTop="20dp"
+        android:text="Hai! We Back Again!"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- //Button adalah elemen yang berfungsi sebagai tombol yang bisa diklik//
+	//Yang nanti nya akan digunakan sebagai jembatan untuk menampilkan hasil atau pindah halaman//
+	//android layout lebar nya 250dp//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//layout marginTop batas button dengan bagian atas object 30dp//
+	//padding 15dp//-->
+    <Button
+        android:id="@+id/button_Start"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:background="@drawable/bg_button"
+        android:text="Lets Start!"/>
+
+</LinearLayout>

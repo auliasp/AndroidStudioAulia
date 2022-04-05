@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Linear layout berfungsi untuk mengatur tata letak dengan atribut android:orientation//
+Orientasi tata letak nya vertikal
+Layout width dan height:match parent artinya menyesuaikan lebar dan tinggi layar smarthphone android//
+tools context:HalamanUtamaActivity-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HalamanUtamaActivity"
+    android:background="@drawable/bg">
+
+    <!--//TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//Android layout marginTop untuk mengatur jarak pada bagian atas objek sebesar 10dp//
+	//android:textAlignment="center" agar text nya berada di tengah// -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Menghitung Berat Badan Ideal"
+        android:textAlignment="center"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--//imageview berfungsi untuk menampilkan gambar pada halaman//
+	//ukuran lebar gambar 136dp, tinggi 145dp dan gravity center yaitu ditengah//
+	//margin top (jarak bagian atas objek) yaitu 30dp// -->
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="136dp"
+        android:layout_height="145dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/tbg" />
+
+    <!--//TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//margin top (jarak bagian atas objek) yaitu 15dp//
+	//Jenis font:sans-serif-condensed-medium//
+	//ukuran text 9pt//
+	//warnaa text hitam// -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Berat Badan (kg)"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginStart="10dp"
+        android:textSize="9pt"
+        android:textColor="@color/black"/>
+
+    <!-- //Edit Text merupakan elemen yang berfungsi untuk mengambil inputan dari user//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//android ems(lebar text) 10//
+	//ukuran text 9pt//-->
+    <EditText
+        android:id="@+id/edbb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <!--//Edit Text merupakan elemen yang berfungsi untuk mengambil inputan dari user//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//android ems(lebar text) 10//
+	//ukuran text 9pt// -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tinggi Badan (cm)"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="9pt"
+        android:textColor="@color/black"/>
+
+    <!-- //Edit Text merupakan elemen yang berfungsi untuk mengambil inputan dari user//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//android ems(lebar text) 10//
+	//ukuran text 9pt//-->
+    <EditText
+        android:id="@+id/edtinggi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <!-- //Button adalah elemen yang berfungsi sebagai tombol yang bisa diklik//
+	//Yang nanti nya akan digunakan sebagai jembatan untuk menampilkan hasil atau pindah halaman//
+	//android layout lebar nya 150dp//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//layout gravity center agar button berada di tengah//
+	//margin top batas text dengan bagian atas objek 10dp//-->
+    <Button
+        android:id="@+id/bthitung"
+        android:onClick="hitung"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Hitung IMT"
+        android:layout_marginTop="10dp"
+        tools:ignore="OnClick" />
+
+    <!-- //TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//margin top jarak bagian atas text dengan objek 15dp//
+	//style atau font text bold italic//-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil Perhitungan :"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold|italic"/>
+
+    <!--//TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//margin top jarak bagian atas text dengan objek 15dp//
+	//jenis font text sans-serif-condensed-medium//
+	//ukuran text 9pt//
+	//warna text hitam// -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Besar Indeks Massa Tubuh (IMT)"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"/>
+
+    <!--//Edit Text merupakan elemen yang berfungsi untuk mengambil inputan dari user//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//android ems(lebar text) 10//
+	//ukuran text 9pt// -->
+    <EditText
+        android:id="@+id/edimt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <!--//TextView merupakan elemen yang berfungsi untuk menampilkan output berupa text//
+	//Kita dapat mengontrol bagaimana teks muncul dengan atribut TextView pada file layout xml//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//margin top jarak bagian atas text dengan objek 15dp//
+	//jenis font text sans-serif-condensed-medium//
+	//ukuran text 9pt//
+	//warna text hitam// -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Keterangan"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"/>
+
+    <!-- //Edit Text merupakan elemen yang berfungsi untuk mengambil inputan dari user//
+	//Android layout width:match parent yaitu menyesuaikan lebar layar smartphone android//
+	//Android layout height:wrap content yaitu agar tinggi dapat menyesuaikan object nya sendiri//
+	//android ems(lebar text) 10//
+	//ukuran text 9pt//-->
+    <EditText
+        android:id="@+id/edket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="9pt"
+        android:layout_marginStart="10dp"
+        android:inputType="textPersonName"
+        android:text="" />
+
+</LinearLayout>
